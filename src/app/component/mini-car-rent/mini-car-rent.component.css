@@ -1,0 +1,38 @@
+#main-sec{
+  position: relative;
+  top: 13vh;
+  height: 85vh;
+  overflow-x: hidden;
+}
+#sec3-div2-rentCar{
+  width: 90vw;
+  position: relative;
+  left: 5vw;
+  height: 30vh;
+}
+#emailInput {
+  position: relative;
+  top: 1vh;
+  left: 2vw;
+}
+
+#sec2-rentCar{
+  position: relative;
+  border: 2px solid black;
+  width: 90vw;
+  top: 11vh;
+  left: 6vw;
+  height: 30vh;
+}
+#rentCar-div{
+  position: relative;
+  width: 85vw;
+  left: 2vw;
+  top: 2vh;
+}
+#btnGroup{
+  position: relative;
+  top: 4vh;
+  left: 85vw;
+
+}

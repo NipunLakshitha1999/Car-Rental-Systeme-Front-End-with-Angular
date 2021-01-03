@@ -1,0 +1,62 @@
+<div id="cus-section1">
+  <img src="assets/car2.jpg" id="background">
+  <div style="text-align: center;display: inline-block" id="cus-section1-div1">
+    <label id="lblCusSignUp"><img src="assets/users.png" id="users">Sign Up User</label>
+  </div>
+  <div id="cus-section1-div2">
+    <div class="row">
+      <div class="col-6">
+        <div class="row">
+          <div class="form-group col-md-6">
+            <label for="userEmail">User Email</label>
+            <input [(ngModel)]="customerEmail" type="email" class="form-control" id="userEmail" aria-describedby="emailHelp" placeholder="Enter Email">
+            <p *ngIf="customerEmailErroState" class="alert alert-danger" role="alert" style="margin-top: 2px">User Email is required!</p>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="userName">User Name</label>
+            <input [(ngModel)]="customerName" type="email" class="form-control" id="userName" aria-describedby="emailHelp">
+            <p *ngIf="customerNameErroState" class="alert alert-danger" role="alert" style="margin-top: 2px">User Name is required!</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group col-md-6">
+            <label for="userAddress">User Address</label>
+            <input [(ngModel)]="customerAddress" type="email" class="form-control" id="userAddress" aria-describedby="emailHelp">
+            <p *ngIf="customerAddressErroState" class="alert alert-danger" role="alert" style="margin-top: 2px">User Address is required!</p>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="userContact">User Contact</label>
+            <input [(ngModel)]="customerContact" type="email" class="form-control" id="userContact" aria-describedby="emailHelp">
+            <p *ngIf="customerContactErroState" class="alert alert-danger" role="alert" style="margin-top: 2px">User Contact is required!</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group col-md-6">
+            <label for="userID">User NIC</label>
+            <input [(ngModel)]="customerNIC" type="email" class="form-control" id="userID" aria-describedby="emailHelp">
+            <p *ngIf="customerNICErroState" class="alert alert-danger" role="alert" style="margin-top: 2px">User NIC is required!</p>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="userLisenID">User Lisen No</label>
+            <input [(ngModel)]="customerLisenNo" type="email" class="form-control" id="userLisenID" aria-describedby="emailHelp">
+            <p *ngIf="customerLisenErroState" class="alert alert-danger" role="alert" style="margin-top: 2px">User Lisen No is required!</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group col-md-6">
+            <label for="userID">Password</label>
+            <input [(ngModel)]="customerPassword" type="email" class="form-control" id="userPassword" aria-describedby="emailHelp">
+            <p *ngIf="customerPasswordErroState" class="alert alert-danger" role="alert" style="margin-top: 2px">User Password is required!</p>
+          </div>
+        </div>
+        &nbsp;
+        <div id="btndiv">
+          <button type="button" id="submit" class="btn btn-outline-primary" (click)="saveCustomer()">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+

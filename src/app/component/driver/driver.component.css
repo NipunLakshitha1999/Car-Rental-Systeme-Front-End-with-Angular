@@ -1,0 +1,15 @@
+#main-div-driver{
+  background-color: #487eb0;
+  overflow-x: hidden;
+  height: 100vh;
+}
+#addDriver-div{
+  position: relative;
+  top: 16vh;
+  left: 30vw;
+}
+#btnGroupDriver{
+  position: relative;
+  top: 20vh;
+  left: 49vw;
+}

@@ -1,0 +1,351 @@
+#adminFormMain {
+  overflow: hidden;
+  display: block;
+}
+
+#sec1-admin {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: #273c75;
+}
+
+#sec1-sec1-admin {
+  position: relative;
+  top: 30vh;
+  left: 0.4vw;
+  width: 98vw;
+  height: 67vh;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+}
+
+#sec2-admin {
+  width: 100vw;
+  height: 207vh;
+  position: relative;
+}
+
+#lblCustomerRequest {
+  font-family: 'Roboto', sans-serif;
+  font-size: 30px;
+}
+
+#sec2-div1-admin {
+  position: relative;
+  top: 3vh;
+  left: 2vw;
+}
+
+#sec2-div2 {
+  position: relative;
+  top: 6vh;
+  left: 2vw;
+}
+
+.my-custom-scrollbar {
+  position: relative;
+  height: 41vh;
+  overflow: auto;
+}
+
+.table-wrapper-scroll-y {
+  display: block;
+}
+
+#sec3-admin {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  background-color: #7f8fa6;
+}
+
+#lblCustomerPayment {
+  font-family: 'Roboto', sans-serif;
+  font-size: 30px;
+}
+
+#sec3-div1-admin {
+  position: relative;
+  top: 3vh;
+  left: 2vw;
+}
+
+#sec3-div2 {
+  position: relative;
+  top: 6vh;
+  left: 2vw;
+}
+
+#sec4 {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+#lblCarMaintance {
+  font-family: 'Roboto', sans-serif;
+  font-size: 30px;
+}
+
+#sec4-div1 {
+  position: relative;
+  top: 3vh;
+  left: 2vw;
+}
+
+#sec4-div2 {
+  position: relative;
+  top: 6vh;
+  left: 2vw;
+}
+
+#sec4-div3 {
+  position: relative;
+  float: right;
+  right: 5vw;
+  top: 10vh;
+}
+
+#driverTable {
+  position: relative;
+  top: 10vh;
+}
+
+#AddRentDetail-div {
+  position: relative;
+  top: 24vh;
+  left: 10vw;
+  width: 80vw;
+  height: 23vh;
+  border: 3px solid black;
+}
+
+#tblrentDetail {
+  position: relative;
+  top: 31vh;
+}
+
+#addDriverDiv {
+  position: relative;
+  left: 2vw;
+}
+
+#lblAddDriver {
+  font-family: Roboto;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+#driverID-driver {
+  font-family: Roboto;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+#driverName-driver {
+  font-family: Roboto;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+#driverAddress-driver {
+  font-family: Roboto;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+#driverContact-driver {
+  font-family: Roboto;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+#driverPassword-driver {
+  font-family: Roboto;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+#driverStatues-driver {
+  font-family: Roboto;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+#addDriver-div {
+  position: relative;
+  left: 8vw;
+  top: 7vh;
+}
+
+#btnGroupDriver {
+  position: relative;
+  top: 15vh;
+  left: 9vw;
+}
+
+#lblCarNo {
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+}
+
+#lblT {
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+}
+
+#FMFD {
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+}
+
+#lblFMM {
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+}
+
+#lblPFKM {
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+}
+
+#lblPD {
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+}
+
+#lblPFM {
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+}
+
+#lblbalace {
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+}
+
+#lblbalace {
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+}
+
+#lblRID {
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+}
+
+#lblDID {
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+}
+#lblFromDate{
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+}
+#lblToDate{
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+}
+
+
+#lblCID {
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+}
+
+#lblKM {
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+}
+
+#lblRNO {
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+}
+
+#lblCNo {
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+}
+
+#addDriver {
+  position: relative;
+  left: 3vw;
+}
+
+#hrCustomerRequest {
+  position: relative;
+  top: 4vh;
+  background: black;
+}
+
+#hrDrivers {
+  position: relative;
+  top: 14vh;
+  background: black;
+}
+
+#AddRentDetail-div-div {
+  position: relative;
+  top: 2vh;
+}
+
+#btnGpRentDetail {
+  position: relative;
+  left: 88%;
+}
+
+#hrRentDetail {
+  position: relative;
+  top: 28vh;
+  background: black;
+  left: 2vw;
+}
+
+#tblrentDetail {
+  position: relative;
+  top: 31vh;
+  width: 97vw;
+  left: 2vw;
+}
+
+#btnGrouprentDetail {
+  position: relative;
+  left: 90%;
+}
+
+#hrRentDetailFrom {
+  position: relative;
+  background: black;
+  left: 3vw;
+  top: 35vh
+}
+#sec3-div2-div1{
+  position: relative;
+  left: 30vw;
+}
+#btnDropCusPayment{
+  position: relative;
+  left: 59vw;
+}
+#hrCusPayment{
+  background: 3px white
+}
+#payment-div{
+  position: relative;
+  border: 2px solid white;
+  width: 90vw;
+  top: 7vh;
+}
+
+#btnPayment{
+  position: relative;
+  top: 10vh;
+}
+#tblPayment{
+  position: relative;
+  top: 17vh;
+  width: 90vw;
+}

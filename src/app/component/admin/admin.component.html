@@ -1,0 +1,330 @@
+<div>
+  <section id="adminFormMain" style="overflow-x: hidden">
+    <section id="sec1-admin">
+      <section id="sec1-sec1-admin">
+        <div class="col mb-2">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a longer card with supporting text below as a natural lead-in
+                to additional content. This content is a little bit longer.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col mb-2">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a longer card with supporting text below as a natural lead-in
+                to additional content. This content is a little bit longer.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col mb-2">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a longer card with supporting text below as a natural lead-in
+                to additional content. This content is a little bit longer.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col mb-2">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a longer card with supporting text below as a natural lead-in
+                to additional content. This content is a little bit longer.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col mb-2">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a longer card with supporting text below as a natural lead-in
+                to additional content. This content is a little bit longer.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col mb-2">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a longer card with supporting text below as a natural lead-in
+                to additional content. This content is a little bit longer.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+    <section id="sec2-admin" style="overflow-x: hidden">
+      <div id="sec2-div1-admin">
+        <label id="lblCustomerRequest">Customer Request</label>
+      </div>
+      <div id="sec2-div2">
+        <div class="table-wrapper-scroll-y my-custom-scrollbar">
+          <table class="table table-dark" id="tblRentAdmin">
+            <thead>
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">CarRegNo</th>
+              <th scope="col">Date</th>
+              <th scope="col">Time</th>
+              <th scope="col">Driver</th>
+              <th scope="col">Email</th>
+              <th scope="col"></th>
+              <th scope="col"></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let tempCustomer of myDataSet">
+              <td>{{tempCustomer.rentid}}</td>
+              <td>{{tempCustomer.carregno}}</td>
+              <td>{{tempCustomer.cardate}}</td>
+              <td>{{tempCustomer.cartime}}</td>
+              <td>{{tempCustomer.cardiver}}</td>
+              <td>{{tempCustomer.cusemail}}</td>
+              <td>
+                <button (click)="acceptRequest(tempCustomer)" class="btn btn-primary">Accept</button>
+              </td>
+              <td>
+                <button (click)="deleteRequest(tempCustomer.rentid)" class="btn btn-danger">Deany</button>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+        <hr id="hrCustomerRequest">
+        <div class="table-wrapper-scroll-y my-custom-scrollbar" id="driverTable">
+          <table class="table table-dark table-bordered table-striped mb-0" id="tblDriver">
+            <thead>
+            <tr>
+              <th scope="col">Email</th>
+              <th scope="col">name</th>
+              <th scope="col">Address</th>
+              <th scope="col">Contact</th>
+              <th scope="col">Status</th>
+              <th scope="col"></th>
+            </tr>
+            </thead>
+            <tbody id="tblDriverBody">
+            <tr *ngFor="let tempDriver of myDriverData">
+              <td>{{tempDriver.driverEmail}}</td>
+              <td>{{tempDriver.driverName}}</td>
+              <td>{{tempDriver.diverAddress}}</td>
+              <td>{{tempDriver.diverContact}}</td>
+              <td>{{tempDriver.status}}</td>
+              <td>
+                <button (click)="addDriver()" class="btn btn-primary">Add Driver</button>
+              </td>
+              <td>
+                <button (click)="selectDriver(tempDriver)" class="btn btn-success">Select Driver</button>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+        <hr id="hrDrivers">
+      </div>
+      <div>
+        <div class="row" id="AddRentDetail-div">
+          <div class="col-12" id="AddRentDetail-div-div">
+            <div class="row">
+              <div class="form-group col-3">
+                <label id="lblRID">Rent ID</label>
+                <input [value]="selectRent?.rentid"  [(ngModel)]="rentIDToRentDetail" aria-describedby="emailHelp" class="form-control" id="detailRentID"
+                       placeholder="Enter ID" type="text">
+              </div>
+              <div class="form-group col-3">
+                <label id="lblDID">DriverID</label>
+                <input  [value]="selectDriverID?.driverEmail"  [(ngModel)]="driverIDToRentDetail" aria-describedby="emailHelp" class="form-control" id="detailDriverID"
+                       placeholder="Enter ID" type="text">
+              </div>
+              <div class="form-group col-3">
+                <label id="lblCID">Car Reg NO</label>
+                <input [value]="selectRent?.carregno"  [(ngModel)]="carIDToRentDetail" aria-describedby="emailHelp" class="form-control" id="detailCarID"
+                       placeholder="Enter ID" type="text">
+              </div>
+              <div class="form-group col-3">
+                <label id="lblKM">KM</label>
+                <input [(ngModel)]="kmToRentDetail" aria-describedby="emailHelp" class="form-control" id="detailTour"
+                       placeholder="Enter ID" type="text">
+              </div>
+            </div>
+          </div>
+          <div class="col-6" id="btnGpRentDetail">
+            <button class="btn btn-primary" (click)="addrentDetail()" type="button">Add Rent</button>
+          </div>
+        </div>
+        <hr id="hrRentDetail">
+        <div class="table-wrapper-scroll-y my-custom-scrollbar" id="tblrentDetail">
+          <table class="table table-dark table-bordered table-striped mb-0">
+            <thead>
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">KM</th>
+              <th scope="col">driverEmail</th>
+              <th scope="col">rentID</th>
+              <th scope="col">carID</th>
+              <th scope="col"></th>
+            </tr>
+            </thead>
+            <tbody id="tblRentDetailFormRentDetailBody">
+            <tr *ngFor="let detail of myRentDetailData" >
+              <td>{{detail.rentDetailID}}</td>
+              <td>{{detail.km}}</td>
+              <td>{{detail.driver}}</td>
+              <td>{{detail.rent}}</td>
+              <td>{{detail.car}}</td>
+              <td>
+                <button (click)="addPayment(detail.rentDetailID,detail.car,detail.km,detail.driver)" class="btn btn-primary">Add Payment</button>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="col-6" id="btnGrouprentDetail">
+          <button class="btn btn-primary" onclick="addrentDetail()" type="button">Save</button>
+        </div>
+        <hr id="hrRentDetailFrom">
+      </div>
+    </section>
+    <section id="sec3-admin">
+      <div id="sec3-div1-admin">
+        <label id="lblCustomerPayment">Customer Payments</label>
+      </div>
+
+
+      <div id="sec3-div2">
+        <div>
+          <div class="col-9" id="sec3-div2-div1">
+            <div class="row">
+              <div class="form-group col-3">
+                <label id="lblRNO">Rent DEatil ID</label>
+                <input [(ngModel)]="rentIDToPaymentSearch" aria-describedby="emailHelp" class="form-control" id="PaymentRentDetailID"
+                       placeholder="Enter ID" type="text">
+              </div>
+              <div class="form-group col-3">
+                <label id="lblCNo">Car RegNo</label>
+                <input [(ngModel)]="carIDToPaymentSearch" aria-describedby="emailHelp" class="form-control" id="PaymentCarRegNO"
+                       placeholder="Enter ID" type="text">
+              </div>
+            </div>
+          </div>
+          <div class="col-6" id="btnDropCusPayment">
+            <button class="btn btn-primary" (click)="search()" type="button">SEARCH</button>
+          </div>
+        </div>
+
+
+        <div>
+          <div class="col-12" id="payment-div">
+            <div class="row">
+              <div class="form-group col-3">
+                <label id="lblCarNo">Car RegNo</label>
+                <input [(ngModel)]="carIDToPayment" aria-describedby="emailHelp" class="form-control" id="PayCarNo"
+                       placeholder="Enter ID" type="text">
+              </div>
+              <div class="form-group col-3">
+                <label id="lblT">Tour</label>
+                <input [(ngModel)]="tourToPayment" aria-describedby="emailHelp" class="form-control" id="payTour"
+                       placeholder="Enter ID" type="text">
+              </div>
+              <div class="form-group col-3">
+                <label id="FMFD">FreeMilageForDay</label>
+                <input [(ngModel)]="freeMIlageDayToPayment" aria-describedby="emailHelp" class="form-control" id="payFreeMiFDay"
+                       placeholder="Enter ID" type="text">
+              </div>
+              <div class="form-group col-3">
+                <label id="lblFMM">FreeMilageForMonth</label>
+                <input [(ngModel)]="feeMilageMonthToPayment" aria-describedby="emailHelp" class="form-control" id="payFreeMiFMonth"
+                       placeholder="Enter ID" type="text">
+              </div>
+              <div class="form-group col-3">
+                <label id="lblPFKM">priceForExKM</label>
+                <input [(ngModel)]="priceForKmToPayment" aria-describedby="emailHelp" class="form-control" id="payPriceExFKm"
+                       placeholder="Enter ID" type="text">
+              </div>
+              <div class="form-group col-3">
+                <label id="lblPD">PriceForDay</label>
+                <input [(ngModel)]="priceForDayToPayment" aria-describedby="emailHelp" class="form-control" id="payPriceFDay"
+                       placeholder="Enter ID" type="text">
+              </div>
+              <div class="form-group col-3">
+                <label id="lblPFM">PriceForMonth</label>
+                <input [(ngModel)]="priceForMonthToPayment" aria-describedby="emailHelp" class="form-control" id="payPriceFMonth"
+                       placeholder="Enter ID" type="text">
+              </div>
+              <div class="form-group col-3">
+                <label id="lblFromDate">Car Rent Date</label>
+                <input [(ngModel)]="rentDateToPayment" aria-describedby="emailHelp" class="form-control" id="1"
+                       placeholder="Enter ID" type="text">
+              </div>
+              <div class="form-group col-3">
+                <label id="lblToDate">Car Hand Over Date</label>
+                <input [(ngModel)]="handOverDateToPayment" aria-describedby="emailHelp" class="form-control" id="2"
+                       placeholder="Enter ID" type="text">
+              </div>
+              <div class="form-group col-3">
+                <label id="lblbalace">Balace</label>
+                <input [(ngModel)]="balanceTopayment" aria-describedby="emailHelp" class="form-control" id="payBalace"
+                       placeholder="Enter ID" type="text">
+              </div>
+              <div class="form-group col-3">
+                <label id="lblDriverStatues">Driver Statues</label>
+                <input [(ngModel)]="updateDriverStatues" aria-describedby="emailHelp" class="form-control" id="driverStatus"
+                       placeholder="Enter ID" type="text">
+              </div>
+            </div>
+          </div>
+          <div class="col-6">
+            <button class="btn btn-primary" id="btnPayment" onclick="addPayment()" type="button">Add Payment</button>
+          </div>
+
+          <table id="tblPayment" class="table table-dark table-bordered table-striped mb-0">
+            <thead>
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">KM</th>
+              <th scope="col">Price</th>
+              <th scope="col">balace</th>
+            </tr>
+            </thead>
+            <tbody id="tblPaymentBody">
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!--        <section id="sec4">-->
+    <!--            <div id="sec4-div1">-->
+    <!--                <label id="lblCarMaintance">Car Maintance</label>-->
+    <!--            </div>-->
+    <!--            <div id="sec4-div2">-->
+    <!--                <div class="table-wrapper-scroll-y my-custom-scrollbar">-->
+
+    <!--                    <table class="table table-dark table-bordered table-striped mb-0">-->
+    <!--                        <thead>-->
+    <!--                        <tr>-->
+
+
+    <!--                        </tr>-->
+    <!--                        </thead>-->
+    <!--                        <tbody id="">-->
+    <!--                        </tbody>-->
+    <!--                    </table>-->
+
+
+    <!--                </div>-->
+
+
+    <!--            </div>-->
+    <!--            <div id="sec4-div3">-->
+    <!--                <button class="btn btn-primary btn-lg" type="button">Large button</button>-->
+    <!--            </div>-->
+    <!--        </section>-->
+
+  </section>
+</div>

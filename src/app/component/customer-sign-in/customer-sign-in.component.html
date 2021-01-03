@@ -1,0 +1,24 @@
+<div id="custonerSignInBody" style="overflow-x: hidden">
+  <section id="customerSignInMain" style="overflow-x: hidden">
+    <img src="assets/AdminSignIn.png" style="position: fixed;height: 100%;width: 100%">
+    <div id="lbl">
+      <label id="admin">Customer Sign In</label>
+    </div>
+    <div class="row" id="inputFeild" style="z-index: 200">
+      <div class="form-group col-6">
+        <label for="signInEmail">Customer address</label>
+        <input [(ngModel)]="CustomerLoginEmailAddress" aria-describedby="emailHelp" class="form-control" id="signInEmail" type="email">
+      </div>
+      <div class="form-group col-6">
+        <label for="signInPassword">Customer password</label>
+        <input [(ngModel)]="CustomerLoginPassword" ria-describedby="emailHelp" class="form-control" id="signInPassword" type="text">
+      </div>
+      <div id="btn-div-customer">
+        <label id="lblCreateAcount"><a routerLinkActive="activate" routerLink="/customerSignUp">Create Acount</a></label>
+        <button class="btn btn-outline-primary" (click)="signInCustomer()" type="button">Primary</button>
+        &nbsp;
+        <button class="btn btn-outline-warning" type="button">Warning</button>
+      </div>
+    </div>
+  </section>
+</div>

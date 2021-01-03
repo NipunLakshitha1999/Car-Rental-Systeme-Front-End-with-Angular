@@ -1,0 +1,22 @@
+<div id="sec2-div2">
+  <div class="table-wrapper-scroll-y my-custom-scrollbar">
+    <table class="table table-dark" id="tblRentAdmin">
+      <thead>
+      <tr>
+        <th scope="col">Date</th>
+        <th scope="col">time</th>
+        <th scope="col">Car</th>
+        <th scope="col">Email</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let data of driverShedule">
+        <td>{{data[5]}}</td>
+        <td>{{data[6]}}</td>
+        <td>{{data[2]}}</td>
+        <td>{{data[3]}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

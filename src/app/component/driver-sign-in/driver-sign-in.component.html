@@ -1,0 +1,23 @@
+
+<section id="main" style="overflow-x: hidden">
+  <img style="position: fixed;height: 100%;width: 100%" src="src/assets/AdminSignIn.png">
+  <div id="lbl">
+    <label id="admin">Driver Sign In</label>
+  </div>
+  <div class="row" style="z-index: 200" id="inputFeild">
+    <div class="form-group col-6">
+      <label for="DriverEmail">Email address</label>
+      <input [(ngModel)]="driverEmail" type="text" class="form-control" id="DriverEmail" aria-describedby="emailHelp">
+    </div>
+    <div class="form-group col-6">
+      <label for="DriverPassword">Email password</label>
+      <input [(ngModel)]="driverPassword" type="text" class="form-control" id="DriverPassword" aria-describedby="emailHelp">
+    </div>
+    <div id="btn-div">
+      <button type="button" class="btn btn-outline-primary" (click)="loginDriver()">Primary</button>
+      &nbsp;
+      <button type="button" class="btn btn-outline-warning">Warning</button>
+    </div>
+  </div>
+</section>
+

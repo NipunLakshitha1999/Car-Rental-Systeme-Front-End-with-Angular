@@ -1,0 +1,86 @@
+<div>
+  <section id="main-sec">
+    <div id="sec3-div2-rentCar">
+      <div class="table-wrapper-scroll-y my-custom-scrollbar">
+
+        <table class="table table-dark table-bordered table-striped mb-0">
+          <thead>
+          <tr>
+            <th scope="col">RegNo</th>
+            <th scope="col">Car_Brand</th>
+            <th scope="col">Colour</th>
+            <th scope="col">Passengers</th>
+            <th scope="col">Transmition</th>
+            <th scope="col">Fuel</th>
+          </tr>
+          </thead>
+          <tbody id="tblMiniCarTblBody">
+          <tr *ngFor="let car of myDataSet">
+              <td>{{car.no}}</td>
+              <td>{{car.carBrand}}</td>
+              <td>{{car.carColor}}</td>
+              <td>{{car.carPassengers}}</td>
+              <td>{{car.carTransmission}}</td>
+              <td>{{car.carFuel}}</td>
+              <td>
+                <button (click)="selectCar(car.no)" class="btn btn-primary">Select Car</button>
+              </td>
+          </tr>
+          </tbody>
+        </table>
+
+      </div>
+
+    </div>
+    <section id="sec2-rentCar">
+      <div class="row" id="emailInput">
+        <div class="col-6">
+          <div class="form-group">
+            <label id="lblRentCarEmail">Customer Email</label>
+            <input [(ngModel)]="rentCustomerEmail" aria-describedby="emailHelp" class="form-control" id="CusEmail"
+                   placeholder="Enter ID" type="text">
+          </div>
+        </div>
+      </div>
+      <div class="row" id="rentCar-div">
+        <div class="col-12">
+          <div class="row">
+            <div class="col-3">
+              <div class="form-group">
+                <label id="lblRegNo">Car_Reg_No</label>
+                <input [(ngModel)]="rentCarRegNo" aria-describedby="emailHelp" class="form-control" id="carNo"
+                       placeholder="Enter ID" type="text">
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="form-group">
+                <label id="lblDate">Date</label>
+                <input [(ngModel)]="rentDate" aria-describedby="emailHelp" class="form-control" id="rentDate"
+                       placeholder="Enter ID" type="date">
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="form-group">
+                <label id="lblTime">Time</label>
+                <input [(ngModel)]="rentTime" aria-describedby="emailHelp" class="form-control" id="rentTime"
+                       placeholder="Enter ID" type="time">
+              </div>
+            </div>
+            <div class="col-3">
+              <label id="lblDriver">Driver</label>
+              <select [(ngModel)]="rentDriver" class="form-control" id="driver">
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="sec4-customerSignIn">
+      <div class="row" id="btnGroup">
+        <button (click)="addRent()" class="btn btn-primary" id="rent" type="button">Add Rent</button>
+      </div>
+    </section>
+  </section>
+</div>
